@@ -5,17 +5,18 @@
   </div>
 </div>
 
-<div class="messages">
+<div class="create">
   <div class="container">
 
     <!-- Your code here -->
-    <% @messages.each do |message| %>
-    <div class="message">
-      <p class="content"><%= message.content %></p>
-      <p class="time"><%= message.created_at %></p>
-    </div>
+    <%= form_for(@message) do |f| %>
+      <div class="field">
+        <%= f.label :message %><br>
+        <%= f.text_area :content %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Create" %>
+      </div>
     <% end %>
-    <%= link_to 'New Message', "messages/new" %>
   </div>
 </div>
-
