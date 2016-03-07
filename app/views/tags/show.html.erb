@@ -5,16 +5,22 @@
   </div>
 </div>
 
-<div class="tags">
+<div class="tag">
   <div class="container">
+    <h2 class="tag-title"><%= @tag.title=%> </h2>
+
     <div class="cards row">
-      <% @tags.each do |t| %>
+
+
+      <% @destinations.each do |d|%>
       <div class="card col-xs-4">
-        <%= image_tag t.image %>
-        <h2><%= t.title %></h2>
-        <%= link_to "Learn more", tag_path(t) %>
+        <%= image_tag d.image %>
+        <h2> <%= d.name =%> </h2>
+        <p> <%= d.description =%> </p>
       </div>
       <% end %>
+
     </div>
+
   </div>
 </div>

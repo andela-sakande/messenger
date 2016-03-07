@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'messages/new' => 'messages#new'
   post 'messages' => 'messages#create'
   get  'tags' => 'tags#index'
+  get '/tags/:id' => 'tags#show', as: :tag
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
