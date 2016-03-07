@@ -7,19 +7,17 @@
 
 <div class="tag">
   <div class="container">
-    <h2 class="tag-title"><%= @tag.title=%> </h2>
+    <h2><%= @tag.title %></h2>
 
     <div class="cards row">
-
-
-      <% @destinations.each do |d|%>
+      <% @destinations.each do |d| %>
       <div class="card col-xs-4">
         <%= image_tag d.image %>
-        <h2> <%= d.name =%> </h2>
-        <p> <%= d.description =%> </p>
+        <h2><%= d.name %></h2>
+        <p><%= d.description %></p>
+        <p><%= link_to "See more", destination_path(d) %></p>
       </div>
       <% end %>
-
     </div>
 
   </div>
