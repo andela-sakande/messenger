@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/destinations/:id' => 'destinations#show', as: :destination
   get '/destinations/:id/edit' => 'destinations#edit', as: :edit_destination
   patch '/destinations/:id' => 'destinations#update'
+  get '/movies' => 'movies#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
